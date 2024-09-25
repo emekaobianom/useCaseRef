@@ -1,7 +1,3 @@
-Awesome! Creating a good **README** for your GitHub repository is essential for explaining what **UseCaseRef** is, how it works, and how others can contribute. Here's a sample **README** for **UseCaseRef** that you can tweak to fit your needs:
-
----
-
 # UseCaseRef
 
 **UseCaseRef** is a simple and structured system for documenting use cases in app development. It helps developers and testers track user flows, actions, and outcomes in a modular and reference-based way, making the process of defining, testing, and managing complex app scenarios easier.
@@ -111,6 +107,3 @@ Feel free to open issues for suggestions, bugs, or general feedback.
 
 **UseCaseRef** is released under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
----
-
-This README gives a clear introduction to **UseCaseRef**, explains how it works, and provides guidance for developers to start using it. You can modify the clone URL, contribution guidelines, and any specific examples as needed for your repository.

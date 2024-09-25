@@ -85,7 +85,7 @@ process:
 To start using **UseCaseRef** in your project, clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/usecaseref.git
+git clone https://github.com/emekaobianom/useCaseRef.git
 ```
 
 ### 2. Documentation

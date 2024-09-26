@@ -1,0 +1,44 @@
+useCaseName: "Signup Flow"
+description: "A user signs up using Google, Facebook, or email."
+
+refs:
+  - refId: 001
+    action: "Install app and signup as a new user"
+    role: "Visitor"
+    preProcess: 
+      - condition: "User is not logged in"
+      - description: "User has installed the app"
+    input: 
+      - CLICK: "appIcon"
+      - CLICK: "nextBtn(page-intro)"
+    output: 
+      - Shows: "signup options page"
+      - OPTIONS: 
+          - signupWithGoogleBtn: "to(refId-003)"
+          - signupWithFacebookBtn: "to(refId-003)"
+          - signupWithEmailBtn: "to(refId-004)"
+          - iAlreadyHaveAnAccountBtn: "to(page-login)"
+    expectedOutcome: "Signup options screen is displayed"
+    errorHandling: 
+      - condition: "Signup page fails to load"
+      - action: "Show error message and retry button"
+
+  - refId: 003
+    action: "Signup with Google or Facebook"
+    role: "Visitor"
+    preProcess: 
+      - refId: "001"
+    input: 
+      - CLICK: "signupWithGoogleBtn(page-signup)"
+    output: 
+      - OK: "to(page-choose)"
+      - FAILED: "to(page-choose)"
+    expectedOutcome: "User is redirected to the page-choose screen after successful signup"
+    errorHandling: 
+      - condition: "Google login fails due to network"
+      - action: "Show 'Network Error' message and allow retry"
+
+metadata:
+  priority: "High"
+  testCoverage: "90%"
+  completionTime: "3 days"
